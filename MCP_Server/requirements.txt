@@ -1,0 +1,4 @@
+langgraph
+python-dotenv
+langchain[openai]
+langchain_mcp_adapters
