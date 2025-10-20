@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 load_dotenv()
 import asyncio
 from langchain_mcp_adapters.client import MultiServerMCPClient
-from langgraph.prebuilt import create_react_agent
+from langchain.agents import create_agent
 import os
 
 
@@ -26,8 +26,8 @@ async def run_agent():
        }
    )
    tools = await client.get_tools()
-   agent = create_react_agent("openai:gpt-4o-mini", tools)
-   response = await agent.ainvoke({"messages": "what are the files and folders present in repository Camrahd/Gen-AI-Projects"})
+   agent = create_agent("openai:gpt-4o-mini", tools)
+   response = await agent.ainvoke({"messages": "remove testing_file.py in the repo Camrahd/Gen-AI-Projects"})
    print(response["messages"][-1].content)
 
 
