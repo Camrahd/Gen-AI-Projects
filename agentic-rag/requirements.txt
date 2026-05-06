@@ -1,0 +1,7 @@
+openai
+faiss-cpu
+rank-bm25
+sentence-transformers
+arxiv
+gradio
+numpy

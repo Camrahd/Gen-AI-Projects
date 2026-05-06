@@ -1,3 +1,6 @@
 .env
 agents
 mcpenv
+rag
+env
+__pycache__
